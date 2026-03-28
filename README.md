@@ -34,29 +34,14 @@ Domain: This project belongs to the domain of financial technology (FinTech) and
 
 Background reading folder: https://myuva-my.sharepoint.com/:f:/g/personal/cqb3tc_virginia_edu/IgCNfrvNnv7RTqshIpOKvqMNATQwMfeQ6U5zlT_hMIvaz6o?e=SoGWmS
 
-
 Table:
 | Title | Description | Link |
 |-------|-------------|------|
-|   False Positives in Credit Card Fraud Detection: Measurement and Mitigation
-    |      Propose a new method for 
-assessing the cost of false positives and evaluate several 
-state-of-the-art fraud detection classifiers using this 
-method.      |    https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQAINZ3zbyM2S4wY_2zdqDnTAaegpeUyhl1truLWT_7n7ks  |
-| The Hidden Cost of Fraud: An Instance-Dependent
-Cost-Sensitive Approach for Positive and Unlabeled Learning |   This work introduces a novel technique that integrates PU
-learning and the instance-dependent cost-sensitive framework: PU-CSBoost. PU-CSBoost
-can directly minimize financial loss through an instance-dependent cost measure that also
-incorporates the misclassification cost due to hidden fraudsters   | https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQD_Xr-KkDfaSoo8wO3jKM9XAeErWJZTzXG3EFMv2qP4Knk?e=efxjDw |
- Solving the false positives problem in fraud prediction
-using automated feature engineering| 
-  |   In this paper, we present an automated feature engineering based approach to dramatically reduce false positives in fraud prediction. |   https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQBaaJMgZOzxR4Opg3pIR2kCARkYXB2gY6csKX_3GkLaBdw   |
-| Reduce card fraud and costs while improving 
-the cardholder experience  |   A visual article describing the negative effects of false positives upon users, and how to mitigate this.  |  https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQDW_QiezwzZRJa0plV0q8_4AdKrUvlncIrfCCX1nIqqdUg?e=22LRxe |
-| Reducing False Positives in Credit Card Fraud Detection 
-through Cost Sensitive Learning Models
-  |      Explores the application of cost-sensitive learning models to effectively reduce false 
-positives while maintaining high fraud detection accuracy.  | https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQDAdIXW4rweQZCXMTgf3N5_AVoMXICif5CTbSJYmxljAb0?e=KfyyYs |
+| False Positives in Credit Card Fraud Detection: Measurement and Mitigation | Proposes a new method for assessing the cost of false positives and evaluates several state-of-the-art fraud detection classifiers using this method. | [Link](https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQAINZ3zbyM2S4wY_2zdqDnTAaegpeUyhl1truLWT_7n7ks) |
+| The Hidden Cost of Fraud: An Instance-Dependent Cost-Sensitive Approach for Positive and Unlabeled Learning | Introduces a novel technique that integrates PU learning and instance-dependent cost-sensitive framework to directly minimize financial loss from fraud. | [Link](https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQD_Xr-KkDfaSoo8wO3jKM9XAeErWJZTzXG3EFMv2qP4Knk?e=efxjDw) |
+| Solving the False Positives Problem in Fraud Prediction Using Automated Feature Engineering | Presents an automated feature engineering based approach to dramatically reduce false positives in fraud prediction. | [Link](https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQBaaJMgZOzxR4Opg3pIR2kCARkYXB2gY6csKX_3GkLaBdw) |
+| Reduce Card Fraud and Costs While Improving the Cardholder Experience | A visual article describing the negative effects of false positives upon users and how to mitigate them. | [Link](https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQDW_QiezwzZRJa0plV0q8_4AdKrUvlncIrfCCX1nIqqdUg?e=22LRxe) |
+| Reducing False Positives in Credit Card Fraud Detection Through Cost Sensitive Learning Models | Explores the application of cost-sensitive learning models to effectively reduce false positives while maintaining high fraud detection accuracy. | [Link](https://myuva-my.sharepoint.com/:b:/g/personal/cqb3tc_virginia_edu/IQDAdIXW4rweQZCXMTgf3N5_AVoMXICif5CTbSJYmxljAb0?e=KfyyYs) |
 
 
 ## Data Creation
