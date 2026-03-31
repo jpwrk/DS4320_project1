@@ -1,6 +1,6 @@
 # DS 4320 Project 1: Minimizing False Positives in Credit Card Fraud Detection
 
-Executive summary: ⭐
+Executive summary: This repository contains the code, documentation, and pipeline for DS4320 Project 1, which investigates the reduction of false positives in credit card fraud detection. The repository includes a data creation notebook that sources and splits the raw Kaggle dataset into four relational tables, a pipeline notebook that loads the data into DuckDB, applies SMOTE to address class imbalance, and trains and evaluates multiple machine learning models including logistic regression, random forest, and XGBoost. Results are compared across models using confusion matrices and a final visualization. The pipeline notebook is also saved as a markdown file for easy viewing. A MIT license and README are included at the root level of the repository, and all data files are stored in a linked UVA OneDrive folder.
 
 Jia Park
 
