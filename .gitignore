@@ -1,1 +1,8 @@
 creditcard.csv
+fraud_labels.csv
+pca_features_a.csv
+pca_features_b.csv
+transactions.csv
+fraud.db
+fraud.db.wal
+pipeline.log
