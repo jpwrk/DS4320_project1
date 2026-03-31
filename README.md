@@ -64,7 +64,7 @@ Provenance: The raw data used in this project was sourced from Kaggle, a public 
 Code: 
 | File | Description | Link |
 |------|-------------|------|
-| data_creation.ipynb | Loads the raw Kaggle dataset, splits it into four relational CSV tables linked by transaction ID, and applies SMOTE to address class imbalance in the training data | [Link](https://github.com/jpwrk/DS4320_project1/blob/main/data_creation.ipynb) |
+| data_creation.ipynb | Loads the raw Kaggle dataset, splits it into four relational CSV tables linked by transaction ID| [Link](https://github.com/jpwrk/DS4320_project1/blob/main/data_creation.ipynb) |
 
 Bias Identification: Since the four relational tables were created by splitting a single Kaggle dataset, any bias present in the original data carries over into the constructed dataset. The original data only covers two days of transactions from European cardholders in 2013, so the dataset does not represent a diverse population of cardholders or time periods. Because the features have been anonymized through PCA, it is also impossible to audit whether the original data collection process introduced any demographic or geographic bias. Additionally, the engineering of a transaction ID from the row index introduces an artificial ordering that does not exist in the real world, which could potentially influence model behavior if the ID were mistakenly included as a feature.
 
