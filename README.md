@@ -6,7 +6,8 @@ Jia Park
 
 cqb3tc
 
-DOI: ⭐
+DOI: <img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/f42f977d-5ebb-4609-bfd0-9a30cfff4843" />
+
 
 Press Release: https://myuva-my.sharepoint.com/:t:/g/personal/cqb3tc_virginia_edu/IQCnFZzNFqqNQb0UtI-_0r9pAc1-qGJMkEiwJCKgjRGC6-k?e=fpCNea
 
