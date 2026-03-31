@@ -15,7 +15,8 @@ Data: https://myuva-my.sharepoint.com/:f:/g/personal/cqb3tc_virginia_edu/IgDP25k
 
 Pipeline: https://myuva-my.sharepoint.com/:f:/g/personal/cqb3tc_virginia_edu/IgAcHPDgzsxqRqNWI00vOzwuAbosDCi01mVACKLiaT1bilk?e=LKCDlc
 
-License: ⭐
+License: MIT license 
+- https://github.com/jpwrk/DS4320_project1/blob/main/LICENSE
 
 ## Problem Definition
 
