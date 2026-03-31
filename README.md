@@ -2,14 +2,14 @@
 
 Executive summary: This repository contains the code, documentation, and pipeline for DS4320 Project 1, which investigates the reduction of false positives in credit card fraud detection. The repository includes a data creation notebook that sources and splits the raw Kaggle dataset into four relational tables, a pipeline notebook that loads the data into DuckDB, applies SMOTE to address class imbalance, and trains and evaluates multiple machine learning models including logistic regression, random forest, and XGBoost. Results are compared across models using confusion matrices and a final visualization. The pipeline notebook is also saved as a markdown file for easy viewing. A MIT license and README are included at the root level of the repository, and all data files are stored in a linked UVA OneDrive folder.
 
-Jia Park
+Name: Jia Park
 
-cqb3tc
+NetID: cqb3tc
 
 DOI: <img width="191" height="20" alt="image" src="https://github.com/user-attachments/assets/f42f977d-5ebb-4609-bfd0-9a30cfff4843" />
 
 
-Press Release: https://myuva-my.sharepoint.com/:t:/g/personal/cqb3tc_virginia_edu/IQCnFZzNFqqNQb0UtI-_0r9pAc1-qGJMkEiwJCKgjRGC6-k?e=fpCNea
+Press Release: https://myuva-my.sharepoint.com/:t:/g/personal/cqb3tc_virginia_edu/IQCnFZzNFqqNQb0UtI-_0r9pAc1-qGJMkEiwJCKgjRGC6-k?e=DLYEXS
 
 Data: https://myuva-my.sharepoint.com/:f:/g/personal/cqb3tc_virginia_edu/IgDP25kYkhXAToyIUUZcS3tuARwprBDZEEW4XlIUfnmt56o?e=KWiiKT
 
@@ -29,7 +29,7 @@ Rationale: Most fraud detection research focuses on catching as much fraud as po
 Motivation: Credit card fraud affects millions of people every year and costs the financial industry billions of dollars annually. While catching fraud is clearly important, overly aggressive detection systems create their own set of problems, including declined purchases, locked accounts, and frustrated customers. This project was motivated by the idea that a strong fraud detection system should not only catch fraud accurately but also avoid unnecessarily disrupting the everyday transactions of legitimate customers.
 
 Press Release: Smarter Fraud Detection: Catching criminals without punishing customers
-- https://myuva-my.sharepoint.com/:t:/g/personal/cqb3tc_virginia_edu/IQCnFZzNFqqNQb0UtI-_0r9pAc1-qGJMkEiwJCKgjRGC6-k?e=XJztNo
+- https://myuva-my.sharepoint.com/:t:/g/personal/cqb3tc_virginia_edu/IQCnFZzNFqqNQb0UtI-_0r9pAc1-qGJMkEiwJCKgjRGC6-k?e=DLYEXS
 
 ## Domain Exposition
 Terminology:
@@ -66,11 +66,11 @@ Code:
 |------|-------------|------|
 | data_creation.ipynb | Loads the raw Kaggle dataset, splits it into four relational CSV tables linked by transaction ID, and applies SMOTE to address class imbalance in the training data | [Link](https://github.com/jpwrk/DS4320_project1/blob/main/data_creation.ipynb) |
 
-Bias Identification: Since the four relational tables were created by splitting a single Kaggle dataset, any bias present in the original data carries over into the constructed dataset. The original data only covers two days of transactions from European cardholders in 2013, so the dataset does not represent a diverse population of cardholders or time periods. Additionally, the uncertainty regarding the features means that there may be some further feature manipulation that we did not do. Because the features have been anonymized through PCA, it is impossible to audit whether the original data collection process introduced any demographic or geographic bias.
+Bias Identification: Since the four relational tables were created by splitting a single Kaggle dataset, any bias present in the original data carries over into the constructed dataset. The original data only covers two days of transactions from European cardholders in 2013, so the dataset does not represent a diverse population of cardholders or time periods. Because the features have been anonymized through PCA, it is also impossible to audit whether the original data collection process introduced any demographic or geographic bias. Additionally, the engineering of a transaction ID from the row index introduces an artificial ordering that does not exist in the real world, which could potentially influence model behavior if the ID were mistakenly included as a feature.
 
-Bias Mitigation: SMOTE was applied only to the training portion of the constructed dataset to synthetically balance the fraud and legitimate transaction classes. This directly addresses the class imbalance bias introduced by the original data collection process. Also, keeping the test set untouched by SMOTE ensures that model evaluation reflects the true real world distribution of transactions rather than an artificially balanced one. This is also less relevant but the data was split in a way that is realistic to the real-world settings of data, with positive and negative classes being seperate.
+Bias Mitigation: Several steps were taken during data construction and modeling to mitigate potential bias. SMOTE was applied only to the training portion of the dataset to synthetically balance the fraud and legitimate transaction classes, directly addressing the class imbalance present in the original data. The test set was kept completely untouched by SMOTE so that model evaluation reflects the true real world distribution of transactions. Most importantly, the transaction ID column was explicitly dropped before model training to ensure it had no influence on predictions, since it carries no meaningful information about fraud. Model performance was also evaluated using precision and recall rather than accuracy, which is a misleading metric on imbalanced datasets and could mask bias toward the majority class.
 
-Rationale: Time and Amount were kept together in the transactions table since they are the only real world observable features. The PCA components were split evenly across two tables since there was no meaningful way to separate anonymous features by content. The fraud labels were isolated into their own table because in a real banking system, labels would be maintained separately from raw transaction data by fraud investigators. A transaction ID was engineered from the row index to serve as the primary key linking all four tables together.
+Rationale: Time and Amount were kept together in the transactions table since they are the only real world observable features. The PCA components were split evenly across two tables since there was no meaningful way to separate anonymous features by content. The fraud labels were isolated into their own table because in a real banking system, labels would be maintained separately from raw transaction data by fraud investigators. A transaction ID was engineered from the row index to serve as the primary key linking all four tables together, but was carefully excluded from model training to avoid introducing artificial patterns into the analysis. All of this was done to mimic real-world data, however bias may have been introduced within the dataset itself, the inclusion of the transaction ID, and therefore the manipulation of the columns.
 
 
 ## Metadata
